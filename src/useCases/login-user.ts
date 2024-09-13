@@ -1,3 +1,4 @@
+// src/useCases/loginUser.ts
 import type { UserRepository } from '@/repositories/user-repository';
 
 interface LoginUserRequest {
@@ -11,6 +12,7 @@ export class LoginUser {
 
   async execute(request: LoginUserRequest): Promise<void> {
     const { email, password } = request;
+    // Lógica de login, como validação ou autenticação
     await this.userRepository.login(email, password);
   }
 }

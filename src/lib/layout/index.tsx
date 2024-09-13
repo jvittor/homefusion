@@ -1,5 +1,6 @@
 'use client';
 
+import { NextUIProvider } from '@nextui-org/react';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import { usePathname } from 'next/navigation';
 import type { ReactNode } from 'react';
@@ -20,10 +21,12 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <GoogleOAuthProvider clientId={GoogleID}>
-        <div className="flex flex-col">
-          {shouldShowHeader && <Header />}
-          <main>{children}</main>
-        </div>
+        <NextUIProvider>
+          <div className="bg-black flex flex-col">
+            {shouldShowHeader && <Header />}
+            <main>{children}</main>
+          </div>
+        </NextUIProvider>
       </GoogleOAuthProvider>
     </ThemeProvider>
   );

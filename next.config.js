@@ -9,7 +9,7 @@ const withPWA = require('next-pwa')({
 module.exports = withPWA({
   reactStrictMode: true,
   images: {
-    domains: ['arte-orange-login.s3.sa-east-1.amazonaws.com'],
+    domains: ['homefusion.s3.sa-east-1.amazonaws.com'],
   },
   eslint: {
     dirs: ['src'],

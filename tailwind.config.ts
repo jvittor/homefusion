@@ -18,8 +18,14 @@ export default {
       },
       orange: '#FF5522',
       white: '#FEFFFE',
+      blue: '#016FED',
     },
-
+    extend: {
+      backgroundImage: {
+        'home-bg':
+          "url('https://homefusion.s3.sa-east-1.amazonaws.com/Frame+1261153862.png')",
+      },
+    },
   },
   plugins: [tailwindTypography],
 } satisfies Config;

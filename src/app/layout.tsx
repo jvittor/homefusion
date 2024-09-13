@@ -6,11 +6,11 @@ import { cn } from '@/lib/styles/utils';
 
 import '@/lib/styles/globals.css';
 
-const APP_NAME = 'homefusion-website';
+const APP_NAME = 'nextarter-tailwind';
 
 export const metadata: Metadata = {
   title: APP_NAME,
-  description: '',
+  description: 'Next.js + TailwindCSS v3 + TypeScript template',
   applicationName: APP_NAME,
   appleWebApp: {
     capable: true,
@@ -21,16 +21,16 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    url: '',
-    title: 'homefusion',
-    description: '',
+    url: 'https://nextarter-tailwind.sznm.dev',
+    title: 'nextarter-tailwind',
+    description: 'Next.js + TailwindCSS v3 + TypeScript template',
     images: {
-      url: '',
-      alt: '',
+      url: 'https://og-image.sznm.dev/**nextarter-tailwind**.sznm.dev.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fsznm.dev%2Favataaars.svg&widths=250',
+      alt: 'nextarter-tailwind.sznm.dev og-image',
     },
   },
   twitter: {
-    creator: '@jvittor',
+    creator: '@sozonome',
     card: 'summary_large_image',
   },
 };
