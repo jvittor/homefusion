@@ -1,133 +1,122 @@
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable no-nested-ternary */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarMenuItem,
+  NavbarMenu,
+  NavbarContent,
+  NavbarItem,
+  Link,
+  Button,
+} from '@nextui-org/react';
 import Image from 'next/image';
+import React from 'react';
+import { IoIosMenu } from 'react-icons/io';
 
-const Header = () => {
+export default function App() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen); // Alterna o estado de abertura do menu
+  };
+
+  const menuItems = [
+    'Profile',
+    'Dashboard',
+    'Activity',
+    'Analytics',
+    'System',
+    'Deployments',
+    'My Settings',
+    'Team Settings',
+    'Help & Feedback',
+    'Log Out',
+  ];
+
   return (
-    <header className="bg-black sticky top-0 z-10 w-full backdrop-blur-md">
-      <header>
-        <nav className="bg-black border-gray-200 px-4 py-2.5 lg:px-6">
-          <div className="mx-auto flex w-full flex-wrap items-center justify-between px-14">
-            <a href="https://flowbite.com" className="flex items-center">
-              <Image
-                src="https://flowbite.com/docs/images/logo.svg"
-                className="mr-3 h-6 sm:h-9"
-                alt="Flowbite Logo"
-                width={500}
-                height={500}
-              />
-              <span className="text-white self-center whitespace-nowrap text-xl font-semibold">
-                Flowbite
-              </span>
-            </a>
-            <div className="flex items-center lg:order-2">
-              <a
-                href="#"
-                className="text-gray-800 hover:bg-gray-50 focus:ring-gray-300 dark:hover:bg-gray-700 dark:focus:ring-gray-800 dark:text-white mr-2 rounded-lg px-4 py-2 text-sm font-medium focus:outline-none focus:ring-4 lg:px-5 lg:py-2.5"
-              >
-                Log in
-              </a>
-              <a
-                href="#"
-                className="text-black bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 mr-2 rounded-lg px-4 py-2 text-sm font-medium focus:outline-none focus:ring-4 lg:px-5 lg:py-2.5"
-              >
-                Sign up
-              </a>
-              <button
-                data-collapse-toggle="mobile-menu-2"
-                type="button"
-                className="text-gray-500 hover:bg-gray-100 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ml-1 inline-flex items-center rounded-lg p-2 text-sm focus:outline-none focus:ring-2 lg:hidden"
-                aria-controls="mobile-menu-2"
-                aria-expanded="false"
-              >
-                <span className="sr-only">Open main menu</span>
-                <svg
-                  className="h-6 w-6"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                <svg
-                  className="hidden h-6 w-6"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div
-              className="hidden w-full items-center justify-between lg:order-1 lg:flex lg:w-auto"
-              id="mobile-menu-2"
-            >
-              <ul className="mt-4 flex flex-col font-medium lg:mt-0 lg:flex-row lg:space-x-8">
-                <li>
-                  <a
-                    href="#"
-                    className="bg-primary-700 lg:bg-transparent lg:text-primary-700 text-white dark:text-white block rounded py-2 pl-3 pr-4 lg:p-0"
-                    aria-current="page"
-                  >
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:hover:text-primary-700 dark:text-gray-400 dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 dark:hover:text-white lg:dark:hover:text-white block border-b py-2 pl-3 pr-4 lg:border-0 lg:p-0"
-                  >
-                    Company
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:hover:text-primary-700 dark:text-gray-400 dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 dark:hover:text-white lg:dark:hover:text-white block border-b py-2 pl-3 pr-4 lg:border-0 lg:p-0"
-                  >
-                    Marketplace
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:hover:text-primary-700 dark:text-gray-400 dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 dark:hover:text-white lg:dark:hover:text-white block border-b py-2 pl-3 pr-4 lg:border-0 lg:p-0"
-                  >
-                    Features
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:hover:text-primary-700 dark:text-gray-400 dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 dark:hover:text-white lg:dark:hover:text-white block border-b py-2 pl-3 pr-4 lg:border-0 lg:p-0"
-                  >
-                    Team
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:hover:text-primary-700 dark:text-gray-400 dark:hover:bg-gray-700 lg:dark:hover:bg-transparent dark:border-gray-700 dark:hover:text-white lg:dark:hover:text-white block border-b py-2 pl-3 pr-4 lg:border-0 lg:p-0"
-                  >
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
-    </header>
-  );
-};
+    <Navbar className="bg-white-100 p-6 text-black-100" isBordered>
+      <NavbarContent className="sm:hidden" justify="start">
+        <IoIosMenu
+          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+          onClick={toggleMenu}
+          size={24}
+        />
+      </NavbarContent>
 
-export default Header;
+      <NavbarContent className="pr-3 sm:hidden" justify="center">
+        <NavbarBrand>
+          <Image
+            alt="Logo"
+            width={24}
+            height={24}
+            src="https://homefusion.s3.sa-east-1.amazonaws.com/home-svgrepo-com+(1)+1.png"
+          />
+          <p className="text-inherit font-bold">ACME</p>
+        </NavbarBrand>
+      </NavbarContent>
+
+      <NavbarContent className="hidden gap-4 sm:flex" justify="center">
+        <NavbarBrand>
+          <Image
+            alt="Logo"
+            width={24}
+            height={24}
+            src="https://homefusion.s3.sa-east-1.amazonaws.com/home-svgrepo-com+(1)+1.png"
+          />
+          <p className="text-inherit font-bold">ACME</p>
+        </NavbarBrand>
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Features
+          </Link>
+        </NavbarItem>
+        <NavbarItem isActive>
+          <Link href="#" aria-current="page">
+            Customers
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Integrations
+          </Link>
+        </NavbarItem>
+      </NavbarContent>
+
+      <NavbarContent justify="end">
+        <NavbarItem className="hidden lg:flex">
+          <Link href="#">Login</Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Button as={Link} color="warning" href="#" variant="flat">
+            Sign Up
+          </Button>
+        </NavbarItem>
+      </NavbarContent>
+
+      {isMenuOpen && (
+        <NavbarMenu>
+          {menuItems.map((item, index) => (
+            <NavbarMenuItem key={`${item}-${index}`}>
+              <Link
+                className="w-full"
+                color={
+                  index === 2
+                    ? 'warning'
+                    : index === menuItems.length - 1
+                      ? 'danger'
+                      : 'foreground'
+                }
+                href="#"
+                size="lg"
+              >
+                {item}
+              </Link>
+            </NavbarMenuItem>
+          ))}
+        </NavbarMenu>
+      )}
+    </Navbar>
+  );
+}

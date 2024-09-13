@@ -42,7 +42,7 @@ export default function App() {
             <Card className="m-0">
               <CardBody className="p-0">
                 <div
-                  className={`divide-gray-300 flex flex-1 cursor-pointer items-center justify-between divide-x rounded-s-2xl p-4 ${getClassName(1)}`}
+                  className={`divide-gray-300 flex flex-1 cursor-pointer items-center justify-between divide-x rounded-s-2xl p-2 sm:p-4 ${getClassName(1)}`}
                   onClick={() => handleClick(1)}
                 >
                   <div>
@@ -80,7 +80,7 @@ export default function App() {
             <Card className="m-0">
               <CardBody className="p-0">
                 <div
-                  className={`divide-gray-300 flex flex-1 cursor-pointer items-center justify-between divide-x p-4 ${getClassName(3)}`}
+                  className={`divide-gray-300 flex flex-1 cursor-pointer items-center justify-between divide-x p-2 sm:p-4 ${getClassName(3)}`}
                   onClick={() => handleClick(3)}
                 >
                   <div>
@@ -113,7 +113,7 @@ export default function App() {
             <Card className="m-0">
               <CardBody className="p-0">
                 <div
-                  className={`divide-gray-300 flex flex-1 cursor-pointer items-center justify-between divide-x rounded-e-xl p-4 ${getClassName(2)}`}
+                  className={`divide-gray-300 flex flex-1 cursor-pointer items-center justify-between divide-x rounded-e-xl p-2 sm:p-4 ${getClassName(2)}`}
                   onClick={() => handleClick(2)}
                 >
                   <div>
@@ -128,13 +128,15 @@ export default function App() {
           <DropdownMenu
             className="w-72 text-base text-black-100"
             aria-label="Dynamic Actions"
+            closeOnSelect={false}
           >
             <DropdownItem
               key="prince"
               className="flex items-center justify-center"
-              closeOnSelect={false}
             >
-              <DropdownPrice />
+              <div>
+                <DropdownPrice />
+              </div>
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>

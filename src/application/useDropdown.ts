@@ -6,8 +6,8 @@ export const useDropdown = () => {
   const [selected, setSelected] = useState<number | null>(null);
   const [selectedTexts, setSelectedTexts] = useState({
     1: 'Escolha uma estratégia',
-    2: 'Escolha uma mercado',
-    3: 'Escolha uma preço',
+    2: 'Escolha um mercado',
+    3: 'Escolha um preço',
   });
 
   const containerRef = useRef<HTMLDivElement>(null);
