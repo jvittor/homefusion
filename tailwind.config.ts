@@ -13,11 +13,14 @@ export default {
     },
     colors: {
       black: {
-        100: '#C4C4C4',
+        100: '#1C1C1E',
         200: '#515255',
       },
       orange: '#FF5522',
-      white: '#FEFFFE',
+      white: {
+        100: '#FFFFFF',
+        200: '#71717A',
+      },
       blue: '#016FED',
     },
     extend: {
