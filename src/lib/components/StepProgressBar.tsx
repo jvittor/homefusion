@@ -8,7 +8,7 @@ import { Card, CardBody, Divider } from '@nextui-org/react';
 import React, { useState } from 'react';
 
 export default function App() {
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState<number | null>(null);
 
   const handleClick = (step: number | null) => {
     setSelected((prevSelected) => (prevSelected === step ? null : step));
