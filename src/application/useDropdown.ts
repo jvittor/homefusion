@@ -21,7 +21,7 @@ export const useDropdown = () => {
       containerRef.current &&
       !containerRef.current.contains(event.target as Node)
     ) {
-      setSelected(null); // Reset selection if clicking outside
+      setSelected(null);
     }
   };
 
@@ -30,7 +30,7 @@ export const useDropdown = () => {
       ...prev,
       [step]: label,
     }));
-    setSelected(null); // Close dropdown after selection
+    setSelected(null);
   };
 
   useEffect(() => {

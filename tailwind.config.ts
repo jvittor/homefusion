@@ -14,7 +14,7 @@ export default {
     colors: {
       black: {
         100: '#1C1C1E',
-        200: '#515255',
+        200: '#71717A',
       },
       orange: '#FF5522',
       white: {

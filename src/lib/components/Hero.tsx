@@ -1,11 +1,10 @@
 import Image from 'next/image';
 
-import StepProgressBar from '../StepProgressBar';
+import StepProgressBar from './StepProgressBar';
 
-const LoginPage = () => (
+const Hero = () => (
   <div className="flex h-96 w-full flex-col items-center justify-center bg-home-bg bg-cover px-2 sm:flex-row md:px-12 lg:h-auto">
-    {/* Formulário de login */}
-    <div className="flex w-full items-center justify-center text-black-200 lg:w-9/12">
+    <div className="flex w-full items-center justify-center text-black-100 lg:w-9/12">
       <div className="grid w-full gap-5">
         <h2 className="px-2 text-center text-4xl font-bold md:text-6xl lg:text-left">
           Encontre as melhores <a className="text-blue">oportunidades</a> de
@@ -25,4 +24,4 @@ const LoginPage = () => (
   </div>
 );
 
-export default LoginPage;
+export default Hero;

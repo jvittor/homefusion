@@ -1,13 +1,15 @@
 import type { NextPage } from 'next';
 
-import QuickStart from '@/lib/components/samples/QuickStart';
-import SomeText from '@/lib/components/samples/SomeText';
+import Hero from '@/lib/components/Hero';
+import Market from '@/lib/components/Market';
+import QuickStart from '@/lib/components/QuickStart';
 
 const Home: NextPage = () => {
   return (
     <div className="flex w-full flex-col items-center justify-center gap-8 text-center">
-      <SomeText />
+      <Hero />
       <QuickStart />
+      <Market />
     </div>
   );
 };

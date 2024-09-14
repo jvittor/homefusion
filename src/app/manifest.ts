@@ -1,8 +1,8 @@
 import type { MetadataRoute } from 'next';
 
 const manifest = (): MetadataRoute.Manifest => ({
-  short_name: 'Orange Portifólio',
-  name: 'Next.js App Template',
+  short_name: 'Home Fusion',
+  name: '',
   lang: 'pt-br',
   start_url: '/',
   background_color: '#FFFFFF',

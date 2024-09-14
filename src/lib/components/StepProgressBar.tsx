@@ -35,7 +35,6 @@ export default function App() {
       ref={containerRef}
       className="relative flex items-stretch text-black-100"
     >
-      {/* Estratégia 1 */}
       <div className="z-10 flex-1">
         <Dropdown className="z-50 w-full rounded-2xl bg-white-100 p-3">
           <DropdownTrigger>
@@ -73,20 +72,19 @@ export default function App() {
 
       <DividerComponent />
 
-      {/* Estratégia 2 */}
       <div className="z-10 flex-1">
         <Dropdown className="z-50 w-full rounded-2xl bg-white-100 p-3">
           <DropdownTrigger>
             <Card className="m-0">
               <CardBody className="p-0">
                 <div
-                  className={`divide-gray-300 flex flex-1 cursor-pointer items-center justify-between divide-x p-2 sm:p-4 ${getClassName(3)}`}
-                  onClick={() => handleClick(3)}
+                  className={`divide-gray-300 flex flex-1 cursor-pointer items-center justify-between divide-x p-2 sm:p-4 ${getClassName(2)}`}
+                  onClick={() => handleClick(2)}
                 >
                   <div>
-                    <div className="text-sm">Passo 3</div>
-                    <div className="font-semibold">Estratégia</div>
-                    <div className="text-sm">{selectedTexts[3]}</div>
+                    <div className="text-sm">Passo 2</div>
+                    <div className="font-semibold">Mercado</div>
+                    <div className="text-sm">{selectedTexts[2]}</div>
                   </div>
                 </div>
               </CardBody>
@@ -106,20 +104,19 @@ export default function App() {
 
       <DividerComponent />
 
-      {/* Estratégia 3 */}
       <div className="z-10 flex-1">
         <Dropdown className="z-50 w-full rounded-2xl bg-white-100 p-3">
           <DropdownTrigger>
             <Card className="m-0">
               <CardBody className="p-0">
                 <div
-                  className={`divide-gray-300 flex flex-1 cursor-pointer items-center justify-between divide-x rounded-e-xl p-2 sm:p-4 ${getClassName(2)}`}
-                  onClick={() => handleClick(2)}
+                  className={`divide-gray-300 flex cursor-pointer flex-col items-start divide-x rounded-e-xl p-2 sm:p-4 ${getClassName(3)}`}
+                  onClick={() => handleClick(3)}
                 >
-                  <div>
-                    <div className="text-sm">Passo 2</div>
-                    <div className="font-semibold">Estratégia</div>
-                    <div className="text-sm">{selectedTexts[2]}</div>
+                  <div className="text-left">
+                    <div className="text-sm">Passo 3</div>
+                    <div className="font-semibold">Preço</div>
+                    <div className="text-sm">{selectedTexts[3]}</div>
                   </div>
                 </div>
               </CardBody>
